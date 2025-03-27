@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fruit Quality Inspection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Fruit Quality Inspection</h1>
+  </header>
+  <div class="main-container">
+    <!-- File Upload Section -->
+    <div class="card upload-container">
+      <h2>Upload Fruit Image</h2>
+      <label for="upload-input" class="upload-label">
+        <span class="upload-icon">&#8682;</span>
+        <p>Drag & Drop or Click to Upload Image</p>
+        <input type="file" id="upload-input" accept="image/*" />
+      </label>
+      <div class="preview-container">
+        <img id="upload-preview" src="" alt="Image Preview" />
+      </div>
+    </div>
+
+    <!-- Camera Capture Section -->
+    <div class="card camera-container">
+      <h2>Capture Fruit Image</h2>
+      <button id="open-camera-btn" class="btn">Open Camera</button>
+      <video id="video" autoplay playsinline style="display: none;"></video>
+      <button id="capture-btn" class="btn" disabled>Capture Photo</button>
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="captured-image-preview">
+        <h1>Captured Image Preview</h1>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
